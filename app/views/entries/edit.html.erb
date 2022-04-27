@@ -1,0 +1,22 @@
+<%= content_for :body_id, "edit" %>
+<section id="hero" class="container-fluid">
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Edit entry #<%= @entry.id %></h1>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="container-fluid">
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <%= render "form", entry: @entry %>
+        <br>
+        <%= link_to "View", @entry, class: "btn j-btn" %>
+        <%= link_to "All entries", entries_path, class: "btn j-btn" %>
+      </div>
+    </div>
+  </section>
+</section>

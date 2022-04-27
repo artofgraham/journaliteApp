@@ -1,0 +1,19 @@
+<%= content_for :body_id, "entries" %>
+<section class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="success"><%= notice %></p>
+        <h1>Journal entries</h1>
+        <%= link_to "New entry", new_entry_path, class: "btn j-btn" %>
+        <div id="entries">
+          <% @entries.each do |entry| %>
+          <div class="log col-lg-6 float-start"><%= render entry %>
+            <%= link_to "View", entry, class: "btn j-btn" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

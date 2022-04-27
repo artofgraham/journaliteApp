@@ -1,0 +1,65 @@
+<%= form_with(model: entry) do |form| %>
+  <% if entry.errors.any? %>
+    <div style="color: red">
+      <h2>Uh oh!</h2>
+      <p><%= pluralize(entry.errors.count, "error") %> prohibited your jounral entry from being created.</p>
+      <ul>
+        <% entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <section>
+    <%= form.label :jentrylog, "Date and time", style: "display: block" %>
+    <%= form.datetime_field :jentrylog %>
+  </section>
+  <section>
+    <%= form.label :gratitude, "Gratitude entry", id: "g-entry" %>
+    <%= form.check_box :gratitude %>
+    <div class="tick"></div>
+  </section>
+  <section>
+    <%= form.label :jentry, "Dear Journal", style: "display: block" %>
+    <%= form.text_area :jentry, class: "page" %>
+  </section>
+  <section class="row">
+    <%= form.label "How are you feeling now?", style: "display: block" %>
+    <div class="mood col-lg-2">
+      <%= image_tag "depressed-emoji.png" %>
+      <%= form.radio_button :feeling, "depressed" %><br>
+      <%= form.label "Depressed", for: "entry_feeling_depressed" %>
+    </div>
+    <div class="mood col-lg-2">
+      <%= image_tag "sad-emoji.png" %>
+      <%= form.radio_button :feeling, "sad" %><br>
+      <%= form.label "Sad", for: "entry_feeling_sad" %>
+    </div>
+    <div class="mood col-lg-2">
+      <%= image_tag "apathetic-emoji.png" %>
+      <%= form.radio_button :feeling, "apathetic" %><br>
+      <%= form.label "Apathetic", for: "entry_feeling_apathetic" %>
+    </div>
+    <div class="mood col-lg-2">
+      <%= image_tag "happy-emoji.png" %>
+      <%= form.radio_button :feeling, "happy" %><br>
+      <%= form.label "Happy", for: "entry_feeling_happy" %>
+    </div>
+    <div class="mood col-lg-2">
+      <%= image_tag "excited-emoji.png" %>
+      <%= form.radio_button :feeling, "excited" %><br>
+      <%= form.label "Excited", for: "entry_feeling_excited" %>
+    </div>
+    <div class="mood col-lg-2">
+      <%= image_tag "love-emoji.png" %>
+      <%= form.radio_button :feeling, "love" %><br>
+      <%= form.label "Love", for: "entry_feeling_love" %>
+    </div>
+  </section>
+  <section>
+    <%= form.hidden_field :user_id %>
+  </section>
+  <section>
+    <%= form.submit "Add entry", :class => "btn j-btn" %>
+  </section>
+<% end %>

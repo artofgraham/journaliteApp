@@ -1,0 +1,42 @@
+<header class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container">
+      <a class="navbar-brand" href="/" tabindex="1"><%= image_tag "journalite-logo.svg", width: "50", title: "journalite" %></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="2">Journal</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/journal" tabindex="3">Your journal</a></li>
+              <li><a class="dropdown-item" href="/entries/new" tabindex="4">New entry</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/thoughts" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="5">Thoughts</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/thoughts" tabindex="6">Your thought records</a></li>
+              <li><a class="dropdown-item" href="/records/new" tabindex="7">New record</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faqs" tabindex="8">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light btn j-btn" href="/login" tabindex="9">Log in</a>
+          </li>
+        </ul>
+      </div>
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
+      <% if user_signed_in? %>
+        <span>Logged in as <%= current_user.email %>
+        <%= link_to 'Log out', destroy_user_session_path, :method => :get%>
+        </span>
+      <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or
+        <%= link_to 'Log in', new_user_session_path %>
+      <% end %>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jentrylog: 2022-04-20 01:59:48
+  gratitude: false
+  jentry: MyText
+  feeling: MyString
+  user: one
+
+two:
+  jentrylog: 2022-04-20 01:59:48
+  gratitude: false
+  jentry: MyText
+  feeling: MyString
+  user: two

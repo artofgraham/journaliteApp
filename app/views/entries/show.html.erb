@@ -1,0 +1,14 @@
+<%= content_for :body_id, "view" %>
+<section class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="success"><%= notice %></p>
+        <%= render @entry %>
+        <%= link_to "All entries", entries_path, class: "btn j-btn" %>
+        <%= link_to "Edit", edit_entry_path(@entry), class: "btn j-btn" %>
+        <%= button_to "Delete", @entry, method: :delete, class: "btn j-btn" %>      
+      </div>
+    </div>
+  </div>
+</section>

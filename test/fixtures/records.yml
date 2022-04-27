@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entrylog: 2022-04-20 02:02:09
+  situation: MyText
+  autothoughtDesc: MyText
+  autothoughtExp: MyText
+  emotionsDesc: MyText
+  emotionsRate: MyText
+  adaptiveResp: MyText
+  outcomes: MyText
+  user: one
+
+two:
+  entrylog: 2022-04-20 02:02:09
+  situation: MyText
+  autothoughtDesc: MyText
+  autothoughtExp: MyText
+  emotionsDesc: MyText
+  emotionsRate: MyText
+  adaptiveResp: MyText
+  outcomes: MyText
+  user: two

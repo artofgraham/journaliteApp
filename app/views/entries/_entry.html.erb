@@ -1,0 +1,19 @@
+<div id="<%= dom_id entry %>">
+  <p>Log entry #<%= entry.id %></p>
+  <p>
+    <strong>Date and time</strong>
+    <%= entry.jentrylog %>
+  </p>
+  <p>
+    <strong>Gratitude</strong>
+    <span class="gratitude"><%= entry.gratitude %></span>
+  </p>
+  <p>
+    <strong>Dear Journal</strong>
+    <%= entry.jentry %>
+  </p>
+  <p>
+    <strong>Feeling:</strong>
+    <span class="feeling"><%= entry.feeling %></span>
+  </p>
+</div>

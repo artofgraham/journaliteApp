@@ -1,0 +1,55 @@
+<%= content_for :body_id, "home" %>
+<section id="hero" class="container-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>Discover the power of journaling with <span class="journalite"><em>journalite</em></span></h1>
+				<%= button_to "Start journaling", new_entry_path, method: :get, class: "btn j-btn" %>
+			</div>
+		<div class="col-lg-4 icon">
+			<%= image_tag "journalite-hero.png", width: "100%", height: "auto", class: "d-block" %>
+		</div>
+		</div>
+	</div>
+</section>
+<section id="gratitude" class="container-fluid case">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h2>Keep a gratitude journal</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<%= button_to "Create grateful memories", new_entry_path, method: :get, class: "btn j-btn" %>
+			</div>
+			<div class="col-lg-4 icon">
+				<%= image_tag "thought-clouds.png", width: "auto", height: "auto", class: "d-block" %>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="cbt" class="container-fluid case">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h2>The power of <abbr title="Cognitive behavioural therapy.">CBT</abbr></h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<%= button_to "Create a thought record", new_record_path, method: :get, class: "btn j-btn" %>
+			</div>
+			<div class="col-lg-4 icon">
+				<%= image_tag "gratitude-hero.png", width: "auto", height: "auto", class: "d-block" %>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="about" class="container-fluid case">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h2>About journalite</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<%= image_tag "happy-journalite.png", width: "auto", height: "auto", class: "happy-journalite" %>
+</section>

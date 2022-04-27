@@ -1,0 +1,64 @@
+<%= form_with(model: record) do |form| %>
+  <% if record.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+        <% record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :entrylog, style: "display: block" %>
+    <%= form.datetime_field :entrylog %>
+  </div>
+
+  <div>
+    <%= form.label :situation, style: "display: block" %>
+    <%= form.text_area :situation %>
+  </div>
+
+  <div>
+    <%= form.label :autothoughtDesc, style: "display: block" %>
+    <%= form.text_area :autothoughtDesc %>
+  </div>
+
+  <div>
+    <%= form.label :autothoughtExp, style: "display: block" %>
+    <%= form.text_area :autothoughtExp %>
+  </div>
+
+  <div>
+    <%= form.label :emotionsDesc, style: "display: block" %>
+    <%= form.text_area :emotionsDesc %>
+  </div>
+
+  <div>
+    <%= form.label :emotionsRate, style: "display: block" %>
+    <%= form.text_area :emotionsRate %>
+  </div>
+
+  <div>
+    <%= form.label :adaptiveResp, style: "display: block" %>
+    <%= form.text_area :adaptiveResp %>
+  </div>
+
+  <div>
+    <%= form.label :outcomes, style: "display: block" %>
+    <%= form.text_area :outcomes %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+  <div>
+    <%= form.hidden_field :user_id %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
