@@ -33,7 +33,7 @@ function iconChange(){
 		}
 	}
 }
-//Replace the ent headings on the journal and thoughts pages when entries and records are present.
+//Replace the ent headings on the 'journal' and 'thoughts' pages when entries and records are present.
 window.addEventListener("load", entCheck);
 function entCheck(){
 	let log = document.getElementsByClassName("log"), rec = document.getElementsByClassName("rec"), ent = document.getElementById("ent-heading").innerHTML, res = document.getElementById("result");
@@ -61,4 +61,17 @@ function entCheck(){
 			}
 		}
 	}
+}
+//Checks the radio button of the feeling when the emoji is clicked.
+let m = document.getElementsByClassName("mood");
+for(let i = 0; i < m.length; i++){
+	m[i].addEventListener("click", function(){
+		document.querySelectorAll("input[type='radio']")[i].checked = true;
+	});
+	m[i].addEventListener("mouseover", function(){
+		document.querySelectorAll(".mood > img")[i].setAttribute("class", "greyscale");
+	});
+	m[i].addEventListener("mouseout", function(){
+		document.querySelectorAll(".mood > img")[i].removeAttribute("class", "greyscale");
+	});
 }
