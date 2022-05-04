@@ -24,6 +24,7 @@ h1
 h2
 {
 	font-size: 38px;
+	margin: 25px 0;
 }
 p
 {
@@ -67,14 +68,27 @@ form section
 {
 	box-shadow: 3px 3px 7px #848484;
 }
+#entries
+{
+	margin: 50px 0 0;
+}
+#view .log
+{
+	height: auto;
+	margin-bottom: 30px;
+	padding-left: 40px;
+	position: relative;
+}
 #edit #hero
 {
+	height: auto;
 	background: linear-gradient(to bottom, #e3b190, #fff 85%);
 }
 .j-btn
 {
 	color: #fff;
 	font-size: 18px;
+	margin: 0 4px;
 	background-color: #a207ea;
 	border: 1px solid transparent;
 }
@@ -83,6 +97,36 @@ form section
 	color: #a207ea;
 	background-color: #fff;
 	border: 1px solid #a207ea;
+}
+.new
+{
+	background-color: #2ecc71;
+}
+.new:hover
+{
+	color: #2ecc71;
+	background-color: #fff;
+	border-color: #2ecc71;
+}
+.edit
+{
+	background-color: #eaa207;
+}
+.edit:hover
+{
+	color: #eaa207;
+	background-color: #fff;
+	border-color: #eaa207;
+}
+.delete
+{
+	background-color: #f32b2b;
+}
+.delete:hover
+{
+	color: #f32b2b;
+	background-color: #fff;
+	border-color: #f32b2b;
 }
 nav.navbar
 {
@@ -104,9 +148,18 @@ nav.navbar
 	height: 500px;
 	margin: 5px 5px 5px 0;
 	padding: 10px 20px;
-	background-color: #fffed7;
+	/*background-color: #fffed7;*/
+	background: linear-gradient(to bottom, #fff 98%, #eee 1px);
+	background-size: 100% 5%;
+	background-position: 0 24px;
+	box-shadow: 3px 3px 5px #ccc;
 	border: 1px solid #f2f2f2;
 	border-radius: 3px;
+}
+#view .log p
+{
+	word-break: unset;
+	hyphens: none;
 }
 .log p
 {
@@ -121,7 +174,14 @@ nav.navbar
 {
 	width: calc(33.33% - 1%);
 }
-.log p:nth-of-type(4)
+#view .log p:nth-of-type(3)
+{
+	overflow: visible;
+	-webkit-line-clamp: unset;
+	text-overflow: unset;
+	line-height: 1.8;
+}
+.log p:nth-of-type(3)
 {
 	overflow: hidden;
 	display: -webkit-box;
@@ -137,10 +197,21 @@ nav.navbar
 	border: 1px solid #d8d8d8;
 	border-radius: 3px;
 }
+.shorten
+{
+	height: 100px;
+}
 .page:focus, input:focus
 {
 	border-color: #a207ea;
 	outline: 0;
+}
+.guide
+{
+	font-size: 14px;
+	color: #000;
+	margin: 10px 0;
+	font-family: "Arial", sans-serif;
 }
 .happy-journalite
 {
@@ -228,6 +299,14 @@ input[type="radio"]
 .error
 {
 	color: #e74c3c;
+}
+.sticky
+{
+	position: fixed;
+}
+.col-lg-4 .sticky
+{
+	padding-right: 44px;
 }
 address
 {

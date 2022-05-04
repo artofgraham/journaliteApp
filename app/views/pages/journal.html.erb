@@ -20,17 +20,18 @@
 			<div class="col-lg-12">
 				<div id="entries">
 					<h2 id="ent-heading">Currently, you have no entries</h2>
-					<p>Displaying <span id="result"></span>.</p>
+					<p><span id="result"></span></p>
 					<% if user_signed_in? %>
+						<p><%= link_to "View entries", entries_path, class: "btn j-btn d-inline-block" %></p>
 						<% @entries.each do |entry| %>
 							<div class="log col-lg-4 float-start"><%= render entry %>
 								<%= link_to "Show", entry, class: "btn j-btn" %>
 							</div>
 						<% end %>
           			<% else %>
-          				<span>Log in to create or view your journal entries.</span>            			
-          			<% end %>					
-				</div>		
+          				<span>Log in to create or view your journal entries.</span>
+          			<% end %>
+				</div>
 			</div>
 		</div>
 	</div>

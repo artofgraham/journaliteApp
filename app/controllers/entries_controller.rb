@@ -6,6 +6,7 @@ class EntriesController < ApplicationController
   def index
     #@entries = Entry.all
     @entries = Entry.where user_id: current_user.id
+    @entries = Entry.order("created_at DESC")
   end
 
   # GET /entries/1 or /entries/1.json

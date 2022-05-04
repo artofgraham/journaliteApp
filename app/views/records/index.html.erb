@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Records</h1>
-
-<div id="records">
-  <% @records.each do |record| %>
-    <%= render record %>
-    <p>
-      <%= link_to "Show this record", record %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New record", new_record_path %>
+<%= content_for :body_id, "records" %>
+<section class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="success"><%= notice %></p>
+        <h1>Thought records</h1>
+        <%= link_to "New record", new_record_path, class: "btn j-btn" %>
+        <div id="records">
+          <% @records.each do |record| %>
+            <div class="log col-lg-6 float-start"><%= render record %>
+              <%= link_to "View", record, class: "btn j-btn" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -43,9 +43,9 @@ function entCheck(){
 			let update = ent.replace(ent, "Your entries");
 			document.getElementById("ent-heading").innerHTML = update;
 			if(result == 1){
-				res.innerHTML = result + " entry";
+				res.innerHTML = "Displaying " + result + " entry.";
 			} else{
-				res.innerHTML = result + " entries";
+				res.innerHTML = "Displaying " + result + " entries.";
 			}
 		}
 	}
@@ -55,9 +55,9 @@ function entCheck(){
 			let update = ent.replace(ent, "Your records");
 			document.getElementById("ent-heading").innerHTML = update;
 			if(result == 1){
-				res.innerHTML = result + " record";
+				res.innerHTML = "Displaying " + result + " record.";
 			} else{
-				res.innerHTML = result + " records";
+				res.innerHTML = "Displaying " + result + " records.";
 			}
 		}
 	}

@@ -8,9 +8,9 @@
         <%= link_to "New entry", new_entry_path, class: "btn j-btn" %>
         <div id="entries">
           <% @entries.each do |entry| %>
-          <div class="log col-lg-6 float-start"><%= render entry %>
-            <%= link_to "View", entry, class: "btn j-btn" %>
-          </div>
+            <div class="log col-lg-6 float-start"><%= render entry %>
+              <%= link_to "View", entry, class: "btn j-btn" %>
+            </div>
           <% end %>
         </div>
       </div>

@@ -1,8 +1,8 @@
 <%= form_with(model: entry) do |form| %>
   <% if entry.errors.any? %>
-    <div style="color: red">
+    <div class="delete">
       <h2>Uh oh!</h2>
-      <p><%= pluralize(entry.errors.count, "error") %> prohibited your jounral entry from being created.</p>
+      <p><%= pluralize(entry.errors.count, "error") %> prohibited your journal entry from being created.</p>
       <ul>
         <% entry.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -60,6 +60,6 @@
     <%= form.hidden_field :user_id %>
   </section>
   <section>
-    <%= form.submit "Add entry", :class => "btn j-btn" %>
+    <%= form.submit "Add entry", :class => "btn j-btn new d-inline-block" %>
   </section>
 <% end %>

@@ -1,5 +1,5 @@
 <div id="<%= dom_id entry %>">
-  <p>Log entry #<%= entry.id %></p>
+  <h2 id="ent-heading">Log entry #<%= entry.id %></h2>
   <p>
     <strong>Date and time</strong>
     <%= entry.jentrylog %>
@@ -9,7 +9,7 @@
     <span class="gratitude"><%= entry.gratitude %></span>
   </p>
   <p>
-    <strong>Dear Journal</strong>
+    <strong>Dear Journal, </strong><br>
     <%= entry.jentry %>
   </p>
   <p>
