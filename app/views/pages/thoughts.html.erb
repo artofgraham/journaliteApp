@@ -20,8 +20,9 @@
 			<div class="col-lg-12">
 				<div id="records">
 					<h2 id="ent-heading">Currently, you have no records</h2>
-					<p>Displaying <span id="result"></span>.</p>
+					<p><span id="result"></span></p>
 					<% if user_signed_in? %>
+						<p><%= link_to "View records", records_path, class: "btn j-btn d-inline-block" %></p>
 						<% @records.each do |record| %>
 							<div class="rec col-lg-4 float-start"><%= render record %>
 								<%= link_to "Show", record, class: "btn j-btn" %>

@@ -1,64 +1,58 @@
 <%= form_with(model: record) do |form| %>
   <% if record.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(record.errors.count, "error") %> prohibited this record from being saved:</h2>
-
+    <section class="delete">
+      <h2>Uh oh!</h2>
+      <p><%= pluralize(record.errors.count, "error") %> prohibited your thought record from being created.</p>
       <ul>
         <% record.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
-    </div>
+    </section>
   <% end %>
-
-  <div>
-    <%= form.label :entrylog, style: "display: block" %>
+  <section>
+    <%= form.label :entrylog, "Date and time", style: "display: block" %>
     <%= form.datetime_field :entrylog %>
-  </div>
-
-  <div>
-    <%= form.label :situation, style: "display: block" %>
-    <%= form.text_area :situation %>
-  </div>
-
-  <div>
-    <%= form.label :autothoughtDesc, style: "display: block" %>
-    <%= form.text_area :autothoughtDesc %>
-  </div>
-
-  <div>
-    <%= form.label :autothoughtExp, style: "display: block" %>
-    <%= form.text_area :autothoughtExp %>
-  </div>
-
-  <div>
-    <%= form.label :emotionsDesc, style: "display: block" %>
-    <%= form.text_area :emotionsDesc %>
-  </div>
-
-  <div>
-    <%= form.label :emotionsRate, style: "display: block" %>
-    <%= form.text_area :emotionsRate %>
-  </div>
-
-  <div>
-    <%= form.label :adaptiveResp, style: "display: block" %>
-    <%= form.text_area :adaptiveResp %>
-  </div>
-
-  <div>
-    <%= form.label :outcomes, style: "display: block" %>
-    <%= form.text_area :outcomes %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-  <div>
+  </section>
+  <section>
+    <%= form.label :situation, "Situation", style: "display: block" %>
+    <p class="guide">What external or internal event is associated with the unpleasant emotion? Describe the unhelpful behaviour in which you engaged.</p>
+    <%= form.text_area :situation, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :autothoughtDesc, "Describe your automatic thoughts", style: "display: block" %>
+    <p class="guide">What thoughts or images or both went through your mind before, during or after the event or unhelpful behaviour?</p>
+    <%= form.text_area :autothoughtDesc, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :autothoughtExp, "Explain your automatic thoughts", style: "display: block" %>
+    <p class="guide">How much did you believe each thought or image?</p>
+    <%= form.text_area :autothoughtExp, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :emotionsDesc, "Describe your emotions", style: "display: block" %>
+    <p class="guide">What emotions&mdash;sad, anxious, angry et cetera&mdash;did you feel before, during or after the event or unhelpful behaviour?</p>
+    <%= form.text_area :emotionsDesc, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :emotionsRate, "Rate your emotions", style: "display: block" %>
+    <p class="guide">How intense was each emotion? Rate from 0 to 100%.</p>
+    <%= form.text_area :emotionsRate, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :adaptiveResp, "Adaptive responses (optional)", style: "display: block" %>
+    <p class="guide">What cognitive distortions did you make? Use the sample questions to compose a response to each automatic thought. Indicate how much you believe each response.</p>
+    <%= form.text_area :adaptiveResp, class: "page shorten" %>
+  </section>
+  <section>
+    <%= form.label :outcomes, "Outcomes", style: "display: block" %>
+    <p class="guide">How much do you now believe each automatic thought? List each emotion that you feel now? How intense is each emotion? Rate between 0 to 100%. What would be good to do?</p>
+    <%= form.text_area :outcomes, class: "page shorten" %>
+  </section>
+  <section>
     <%= form.hidden_field :user_id %>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
+  </section>
+  <section>
+    <%= form.submit "Add record", :class => "btn j-btn new d-inline-block" %>
+  </section>
 <% end %>

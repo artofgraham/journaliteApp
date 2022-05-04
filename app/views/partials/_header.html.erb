@@ -22,20 +22,16 @@
           <li class="nav-item">
             <a class="nav-link" href="/faqs" tabindex="8">FAQs</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light btn j-btn" href="/login" tabindex="9">Log in</a>
-          </li>
         </ul>
       </div>
       <span class="notice"><%= notice %></span>
       <span class="alert"><%= alert %></span>
       <% if user_signed_in? %>
-        <span>Logged in as <%= current_user.email %>
-        <%= link_to 'Log out', destroy_user_session_path, :method => :get%>
+        <span><%= link_to 'Log out', destroy_user_session_path, :method => :get, class: "btn j-btn" %><br>Welcome, <%= current_user.email %>!
         </span>
       <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or
-        <%= link_to 'Log in', new_user_session_path %>
+        <%= link_to 'Register', new_user_registration_path, class: "btn j-btn" %> or
+        <%= link_to 'Log in', new_user_session_path, class: "btn j-btn" %>
       <% end %>
     </div>
   </nav>
