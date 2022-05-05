@@ -8,10 +8,18 @@
         <%= link_to "New record", new_record_path, class: "btn j-btn" %>
         <div id="records">
           <% @records.each do |record| %>
-            <div class="log col-lg-6 float-start"><%= render record %>
-              <%= link_to "View", record, class: "btn j-btn" %>
+            <div class="col-lg-6 float-start">
+              <div class="rec">
+                <%= render record %>
+                <%= link_to "View", record, class: "btn j-btn" %>
+              </div>
             </div>
           <% end %>
+          <section class="float-end">
+            <div class="paginator d-block float-start">
+              <%= paginate @records %>
+            </div>
+          </section>
         </div>
       </div>
     </div>
