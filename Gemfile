@@ -33,7 +33,11 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
+# Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
 gem "devise"
+
+# A scope- and engine-based, clean, powerful, customisable and sophisticated paginator for modern web app frameworks and ORMs. [https://github.com/kaminari/kaminari]
+gem "kaminari"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
