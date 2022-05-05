@@ -6,32 +6,30 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/journal" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="2">Journal</a>
+            <%= link_to "Journal", journal_path, { class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "2" } %>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/journal" tabindex="3">Your journal</a></li>
-              <li><a class="dropdown-item" href="/entries/new" tabindex="4">New entry</a></li>
+              <li><%= link_to "Your journal", journal_path, class: "dropdown-item", tabindex: "3" %></li>
+              <li><%= link_to "New entry", new_entry_path, class: "dropdown-item", tabindex: "4" %></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/thoughts" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" tabindex="5">Thoughts</a>
+            <%= link_to "Thoughts", thoughts_path, { class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "5" } %>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/thoughts" tabindex="6">Your thought records</a></li>
-              <li><a class="dropdown-item" href="/records/new" tabindex="7">New record</a></li>
+              <li><%= link_to "Your thought records", thoughts_path, class: "dropdown-item", tabindex: "6" %></li>
+              <li><%= link_to "New record", new_record_path, class: "dropdown-item", tabindex: "7" %></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/faqs" tabindex="8">FAQs</a>
-          </li>
+          <li class="nav-item"><%= link_to "FAQs", faqs_path, class: "nav-link", tabindex: "8" %></li>
         </ul>
       </div>
       <span class="notice"><%= notice %></span>
       <span class="alert"><%= alert %></span>
       <% if user_signed_in? %>
-        <span><%= link_to 'Log out', destroy_user_session_path, :method => :get, class: "btn j-btn" %><br>Welcome, <%= current_user.email %>!
+        <span><%= link_to "Log out", destroy_user_session_path, :method => :get, class: "btn j-btn" %><br>Welcome, <%= current_user.email %>!
         </span>
       <% else %>
-        <%= link_to 'Register', new_user_registration_path, class: "btn j-btn" %> or
-        <%= link_to 'Log in', new_user_session_path, class: "btn j-btn" %>
+        <%= link_to "Register", new_user_registration_path, class: "btn j-btn" %> or
+        <%= link_to "Log in", new_user_session_path, class: "btn j-btn" %>
       <% end %>
     </div>
   </nav>
