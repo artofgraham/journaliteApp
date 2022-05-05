@@ -14,7 +14,13 @@ h1, h2, h3, h4, h5, h6, p, li, td
 }
 a, button
 {
+	color: #a207ea;
 	font-family: "Arial", sans-serif;
+}
+a:hover
+{
+	color: ;
+	text-decoration: none;
 }
 h1
 {
@@ -145,7 +151,7 @@ nav.navbar
 }
 .log
 {
-	height: 500px;
+	height: 520px;
 	margin: 5px 5px 5px 0;
 	padding: 10px 20px;
 	background: linear-gradient(to bottom, #fff 98%, #eee 1px);
@@ -215,8 +221,9 @@ nav.navbar
 .happy-journalite
 {
 	position: absolute;
-	right: 0;
+	right: 20%;
 	bottom: 60px;
+	transform: translate(50%, 0);
 }
 label, .log p strong
 {
@@ -364,6 +371,14 @@ footer
 }
 @media only screen and (max-width: 991px)
 {
+	#hero img
+	{
+		width: auto;
+	}
+	.happy-journalite
+	{
+		right: 50%;
+	}
 	.sticky
 	{
 		position: static;
