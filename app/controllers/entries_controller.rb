@@ -5,8 +5,9 @@ class EntriesController < ApplicationController
   # GET /entries or /entries.json
   def index
     #@entries = Entry.all
+    @title = "All your journal entries | journalite"
     @entries = Entry.where user_id: current_user.id
-    @entries = Entry.order("created_at DESC")
+    @entries = Entry.order("created_at DESC").page(params[:page]).per(6)
   end
 
   # GET /entries/1 or /entries/1.json

@@ -1,17 +1,27 @@
-<%= content_for :body_id, "entries" %>
+<%= content_for :body_id, "j-entries" %>
 <section class="container-fluid">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <p class="success"><%= notice %></p>
+        <div class="success">
+          <p><%= notice %></p>
+        </div>
         <h1>Journal entries</h1>
         <%= link_to "New entry", new_entry_path, class: "btn j-btn" %>
         <div id="entries">
           <% @entries.each do |entry| %>
-            <div class="log col-lg-6 float-start"><%= render entry %>
-              <%= link_to "View", entry, class: "btn j-btn" %>
+            <div class="col-lg-6 float-start">
+              <div class="log">
+                <%= render entry %>
+                <%= link_to "View", entry, class: "btn j-btn" %>
+              </div>
             </div>
           <% end %>
+          <section class="col-lg-12 float-start">
+            <div class="paginator d-block float-end">
+              <%= paginate @entries %>
+            </div>
+          </section>
         </div>
       </div>
     </div>

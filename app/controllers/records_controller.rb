@@ -6,6 +6,8 @@ class RecordsController < ApplicationController
   def index
     #@records = Record.all
     @records = Record.where user_id: current_user.id
+    @records = Record.order("created_at DESC")
+    @records = Record.page(params[:page]).per(6)
   end
 
   # GET /records/1 or /records/1.json

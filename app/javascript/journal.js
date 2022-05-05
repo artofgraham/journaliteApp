@@ -3,32 +3,32 @@ window.addEventListener("load", iconChange);
 function iconChange(){
 	let log = document.getElementsByClassName("log");
 	for(let i = 0; i < log.length; i++){
-		let feeling = document.getElementsByClassName("feeling")[i].innerHTML;
+		let feeling = document.getElementsByClassName("feeling")[i].innerHTML, emoji;
 		if(feeling == "depressed"){
-			let happyEmoji = feeling.replace("depressed", '<img src="/assets/depressed-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = happyEmoji;
+			emoji = feeling.replace("depressed", '<img src="/assets/depressed-emoji.png" alt="A depressed emoji." title="Depressed emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		} else if(feeling == "sad"){
-			let sadEmoji = feeling.replace("sad", '<img src="/assets/sad-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = sadEmoji;
+			emoji = feeling.replace("sad", '<img src="/assets/sad-emoji.png" alt="A sad emoji." title="Sad emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		} else if(feeling == "apathetic"){
-			let sadEmoji = feeling.replace("apathetic", '<img src="/assets/apathetic-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = sadEmoji;
+			emoji = feeling.replace("apathetic", '<img src="/assets/apathetic-emoji.png" alt="An apathetic emoji. title="Apathetic emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		} else if(feeling == "happy"){
-			let sadEmoji = feeling.replace("happy", '<img src="/assets/happy-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = sadEmoji;
+			emoji = feeling.replace("happy", '<img src="/assets/happy-emoji.png" alt="A happy emoji." title="Happy emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		} else if(feeling == "excited"){
-			let sadEmoji = feeling.replace("excited", '<img src="/assets/excited-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = sadEmoji;
+			emoji = feeling.replace("excited", '<img src="/assets/excited-emoji.png" alt="An excited emoji." title="Excited emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		} else if(feeling == "love"){
-			let sadEmoji = feeling.replace("love", '<img src="/assets/love-emoji.png">');
-			document.getElementsByClassName("feeling")[i].innerHTML = sadEmoji;
+			emoji = feeling.replace("love", '<img src="/assets/love-emoji.png" alt="A love emoji." title="Love emoji.">');
+			document.getElementsByClassName("feeling")[i].innerHTML = emoji;
 		}
 		let gratitude = document.getElementsByClassName("gratitude")[i].innerHTML;
 		if(gratitude == "true"){
-			let successTick = gratitude.replace("true", '<img src="/assets/success-tick.png">');
+			let successTick = gratitude.replace("true", '<img src="/assets/success-tick.png" alt="A tick for true." title="A tick for true.">');
 			document.getElementsByClassName("gratitude")[i].innerHTML = successTick;
 		} else{
-			let errorTick = gratitude.replace("false", '<img src="/assets/error-cross.png">');
+			let errorTick = gratitude.replace("false", '<img src="/assets/error-cross.png" alt="An X for false." title="An X for false.">');
 			document.getElementsByClassName("gratitude")[i].innerHTML = errorTick;
 		}
 	}
