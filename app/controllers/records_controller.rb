@@ -5,9 +5,9 @@ class RecordsController < ApplicationController
   # GET /records or /records.json
   def index
     #@records = Record.all
+    @title = "All your thought records | journalite"
     @records = Record.where user_id: current_user.id
-    @records = Record.order("created_at DESC")
-    @records = Record.page(params[:page]).per(6)
+    @records = Record.order("created_at DESC").page(params[:page]).per(4)
   end
 
   # GET /records/1 or /records/1.json

@@ -60,6 +60,7 @@ form section
 }
 #hero
 {
+	position: relative;
 	background: linear-gradient(to bottom, #fffa68, #fff 85%);
 }
 #journal #hero
@@ -83,13 +84,14 @@ form section
 {
 	box-shadow: 3px 3px 7px #848484;
 }
-#entries
+#entries, #records
 {
 	margin: 50px 0 0;
 }
-#view .log
+#view .log, #view .rec
 {
 	height: auto;
+	max-height: fit-content;
 	margin-bottom: 30px;
 	padding-left: 40px;
 	position: relative;
@@ -97,7 +99,12 @@ form section
 #edit #hero
 {
 	height: auto;
-	background: linear-gradient(to bottom, #e3b190, #fff 85%);
+	padding: 0;
+	background: linear-gradient(to bottom, #eaa207, #fff 100%);
+}
+#edit #hero .container
+{
+	padding: 0;
 }
 .j-btn
 {
@@ -166,34 +173,55 @@ nav.navbar
 	background: linear-gradient(to bottom, #fff 98%, #eee 1px);
 	background-size: 100% 5%;
 	background-position: 0 24px;
-	box-shadow: 3px 3px 5px #ccc;
 	border: 1px solid #f2f2f2;
 	border-radius: 3px;
+	box-shadow: 3px 3px 5px #ccc;
 }
-#view .log p
+.rec
+{
+	min-height: auto;
+	max-height: 1185px;
+	margin: 0 10px 10px 0;
+	padding: 0 20px 10px 20px;
+	background-color: #f3f3f3;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px #ccc;
+}
+#view .log p, #view .rec p
 {
 	word-break: unset;
 	hyphens: none;
 }
-.log p
+.log p, .rec p
 {
 	word-break: break-all;
 	hyphens: auto;
 }
-#view .log p:nth-of-type(3)
+#view .log p:nth-of-type(3), #view .rec p
 {
 	overflow: visible;
 	-webkit-line-clamp: unset;
 	text-overflow: unset;
 	line-height: 1.8;
 }
-.log p:nth-of-type(3)
+.log p:nth-of-type(3), .rec p
 {
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
 	text-overflow: ellipsis;
+}
+.t_rec
+{
+	color: #fff;
+	width: auto;
+	margin: 0 0 5px;
+	font-size: 16px;
+	padding: 2px 8px;
+	background-color: #a207ea;
+	box-shadow: 3px 3px 0 #000;
 }
 .page
 {
@@ -339,6 +367,10 @@ input[type="radio"]:checked ~ .circle, .circle:checked
 {
 	margin: 0 auto;
 }
+.success
+{
+	padding: 6px 0;
+}
 .success p
 {
 	color: #2ecc71;
@@ -396,11 +428,24 @@ footer
 	bottom: 0;
 	background-color: #a207ea;
 }
+@media only screen and (max-width:  1200px)
+{
+	.t_rec
+	{
+		font-size: 13px;
+	}
+}
 @media only screen and (max-width: 991px)
 {
 	#hero img
 	{
 		width: auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+		opacity: 10%;
 	}
 	.happy-journalite
 	{

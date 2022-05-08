@@ -6,8 +6,8 @@
         <div class="success">
           <p><%= notice %></p>
         </div>
-        <h1>Journal entries</h1>
-        <%= link_to "New entry", new_entry_path, class: "btn j-btn" %>
+        <h1 class="heading">Journal entries</h1>
+        <%= link_to "New entry", new_entry_path, class: "btn j-btn new" %>
         <div id="entries">
           <% @entries.each do |entry| %>
             <div class="col-lg-6 float-start">

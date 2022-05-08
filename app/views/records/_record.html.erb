@@ -1,47 +1,35 @@
 <div id="<%= dom_id record %>">
+  <h2 id="ent-heading">Record #<%= record.id %></h2>
   <p>
-    <strong>Entrylog:</strong>
+    <span class="t_rec d-inline-block"><strong>Date and time</strong></span>
     <%= record.entrylog %>
   </p>
-
   <p>
-    <strong>Situation:</strong>
+    <span class="t_rec d-inline-block"><strong>Situation</strong></span><br>
     <%= record.situation %>
   </p>
-
   <p>
-    <strong>Autothoughtdesc:</strong>
+    <span class="t_rec d-inline-block"><strong>Description of automatic thoughts</strong></span><br>
     <%= record.autothoughtDesc %>
   </p>
-
   <p>
-    <strong>Autothoughtexp:</strong>
+    <span class="t_rec d-inline-block"><strong>Explanation of automatic thoughts</strong></span><br>
     <%= record.autothoughtExp %>
   </p>
-
   <p>
-    <strong>Emotionsdesc:</strong>
+    <span class="t_rec d-inline-block"><strong>Description of emotions</strong></span><br>
     <%= record.emotionsDesc %>
   </p>
-
   <p>
-    <strong>Emotionsrate:</strong>
+    <span class="t_rec d-inline-block"><strong>Rate of emotions</strong></span><br>
     <%= record.emotionsRate %>
   </p>
-
   <p>
-    <strong>Adaptiveresp:</strong>
+    <span class="t_rec d-inline-block"><strong>Adaptive responses</strong></span><br>
     <%= record.adaptiveResp %>
   </p>
-
   <p>
-    <strong>Outcomes:</strong>
+    <span class="t_rec d-inline-block"><strong>Outcomes</strong></span><br>
     <%= record.outcomes %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= record.user_id %>
-  </p>
-
 </div>

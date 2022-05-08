@@ -1,6 +1,6 @@
 <%= form_with(model: record) do |form| %>
   <% if record.errors.any? %>
-    <section class="delete">
+    <section class="error">
       <h2>Uh oh!</h2>
       <p><%= pluralize(record.errors.count, "error") %> prohibited your thought record from being created.</p>
       <ul>

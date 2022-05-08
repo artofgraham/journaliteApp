@@ -34,14 +34,14 @@ function iconChange(){
 	}
 }
 //Replace the ent headings on the 'journal' and 'thoughts' pages when entries and records are present.
-window.addEventListener("load", entCheck);
-function entCheck(){
-	let log = document.getElementsByClassName("log"), rec = document.getElementsByClassName("rec"), ent = document.getElementById("ent-heading").innerHTML, res = document.getElementById("result");
+window.addEventListener("load", collectionCheck);
+function collectionCheck(){
+	let log = document.getElementsByClassName("log"), rec = document.getElementsByClassName("rec"), heading = document.getElementsByClassName("heading"), res = document.getElementById("result");
 	for(let i = 0; i < log.length; i++){
-		let result = log.length;
-		if(ent == "Currently, you have no entries"){
-			let update = ent.replace(ent, "Your entries");
-			document.getElementById("ent-heading").innerHTML = update;
+		let result = log.length, h = heading[i].innerHTML;
+		if(h == "Currently, you have no entries"){
+			let update = h.replace(h, "Your entries");
+			document.getElementsByClassName("heading")[i].innerHTML = update;
 			if(result == 1){
 				res.innerHTML = "Displaying " + result + " entry.";
 			} else{
@@ -50,10 +50,10 @@ function entCheck(){
 		}
 	}
 	for(let i = 0; i < rec.length; i++){
-		let result = rec.length;
-		if(ent == "Currently, you have no records"){
-			let update = ent.replace(ent, "Your records");
-			document.getElementById("ent-heading").innerHTML = update;
+		let result = rec.length, h = heading[i].innerHTML;
+		if(h == "Currently, you have no records"){
+			let update = h.replace(h, "Your records");
+			document.getElementsByClassName("heading")[i].innerHTML = update;
 			if(result == 1){
 				res.innerHTML = "Displaying " + result + " record.";
 			} else{

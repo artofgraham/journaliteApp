@@ -1,10 +1,22 @@
-<h1>Editing record</h1>
-
-<%= render "form", record: @record %>
-
-<br>
-
-<div>
-  <%= link_to "Show this record", @record %> |
-  <%= link_to "Back to records", records_path %>
-</div>
+<%= content_for :body_id, "edit" %>
+<section id="hero" class="container-fluid">
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Edit record #<%= @record.id %></h1>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="container-fluid">
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <%= render "form", record: @record %>
+        <br>
+        <%= link_to "View", @record, class: "btn j-btn" %>
+        <%= link_to "All records", records_path, class: "btn j-btn" %>
+      </div>
+    </div>
+  </section>
+</section>
