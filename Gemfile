@@ -82,6 +82,10 @@ group :test do
   gem "webdrivers"
 end
 
+# group :development, :test do
+#   gem "rspec-rails"
+# end
+
 #Heroku
 group :production do
   gem "pg"

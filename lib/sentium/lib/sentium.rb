@@ -1,5 +1,5 @@
 class Sentium
-	def self.askFeeling
+	def self.askFeeling(feeling)
 		puts("Which of the following are you feeling?\nDepressed; sad; apathetic; happy; excited; love.")
 		feeling = gets.chomp
 		feeling = feeling.downcase
