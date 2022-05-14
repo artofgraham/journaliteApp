@@ -53,6 +53,13 @@ section
 	margin: 10px 0;
 	background-color: #f8f8f8;
 }
+.user
+{
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: #f8f8f8;
+}
 form section
 {
 	padding: 0;
@@ -171,7 +178,7 @@ nav.navbar
 	margin: 0 10px 10px 0;
 	padding: 10px 20px;
 	background: linear-gradient(to bottom, #fff 98%, #eee 1px);
-	background-size: 100% 5%;
+	background-size: 100% 25px;
 	background-position: 0 24px;
 	border: 1px solid #f2f2f2;
 	border-radius: 3px;
@@ -266,6 +273,12 @@ label, .log p strong
 {
 	margin-left: 27px;
 }
+input[type="datetime-local"]
+{
+	padding: 4px;
+	border: 2px solid #a207ea;
+	border-radius: 3px;
+}
 input[type="checkbox"]
 {
 	width: 20px;
@@ -325,12 +338,13 @@ input[type="radio"]
 }
 .circle
 {
-	width: 56px;
-	height: 56px;
-	top: -3px;
-	left: 25px;
+	width: 55px;
+	height: 55px;
+	top: 50%;
+	left: 50%;
 	position: absolute;
 	transition: 0.2s ease-in-out 0s;
+	transform: translate(-50%, -90%);
 	border-radius: 100%;
 	cursor: pointer;
 }
@@ -389,6 +403,24 @@ input[type="radio"]:checked ~ .circle, .circle:checked
 .col-lg-4 .sticky
 {
 	padding-right: 44px;
+}
+table
+{
+	border: 1px solid #f8f8f8;
+}
+tr > *
+{
+	padding: 8px 12px;
+}
+th
+{
+	font-size: 18px;
+	color: #fff;
+	background-color: #a207ea;
+}
+tr:nth-of-type(2n)
+{
+	background-color: #f8f8f8;
 }
 .paginator
 {
@@ -454,5 +486,9 @@ footer
 	.sticky
 	{
 		position: static;
+	}
+	.row > * .mood
+	{
+		width: auto;
 	}
 }
