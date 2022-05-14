@@ -36,6 +36,12 @@ p
 {
 	margin: 30px 0;
 }
+header
+{
+	position: relative;
+	z-index: 99;
+	background-color: #fff;
+}
 nav ul li a, button
 {
 	font-family: "Arial", sans-serif;
@@ -55,9 +61,9 @@ section
 }
 .user
 {
-	border: 1px solid #ddd;
+	border: 1px solid #a207ea;
 	border-radius: 3px;
-	padding: 10px;
+	padding: 10px 20px 20px;
 	background-color: #f8f8f8;
 }
 form section
@@ -113,6 +119,11 @@ form section
 {
 	padding: 0;
 }
+.btn:focus
+{
+	border: 1px solid #a207ea;
+	outline: 0;
+}
 .j-btn
 {
 	color: #fff;
@@ -126,6 +137,18 @@ form section
 	color: #a207ea;
 	background-color: #fff;
 	border: 1px solid #a207ea;
+}
+.invert
+{
+	color: #a207ea;
+	background-color: #fff;
+	border-color: #a207ea;
+}
+li.nav-item a.nav-link.j-btn.invert:hover, .invert:hover
+{
+	color: #fff;
+	background-color: #a207ea;
+	border-color: transparent;
 }
 .new
 {
@@ -161,12 +184,38 @@ nav.navbar
 {
 	padding: 0;
 }
-.nav-item
+ul.dropdown-menu
+{
+	padding: 0;
+	border: 1px solid #a207ea;
+}
+a.dropdown-item
+{
+	color: #a207ea;
+}
+.dropdown-item:hover, .dropdown-item:focus
+{
+	color: #fff;
+	background-color: #a207ea;
+}
+li.nav-item a.nav-link.j-btn.invert
 {
 	margin: 0 5px;
-	background-color: #f1f2f4;
-	border-radius: 5px;
+	color: #a207ea;
 	font-weight: bold;
+	background-color: #fff;
+	border-radius: 5px;
+}
+li.nav-item a.nav-link.j-btn
+{
+	
+	color: #fff;
+	font-weight: bold;
+}
+li.nav-item a.nav-link.j-btn:hover
+{
+	
+	color: #a207ea;
 }
 .case
 {
@@ -358,6 +407,13 @@ input[type="radio"]:checked ~ .circle, .circle:checked
 	border: 2px solid #a207ea;
 	border-radius: 100%;
 }
+input[type="email"], input[type="password"]
+{
+	width: 50%;
+	padding: 4px;
+	border-color: #a207ea;
+	border-radius: 4px;
+}
 .circle:after
 {
 	display: none;
@@ -460,7 +516,11 @@ footer
 	bottom: 0;
 	background-color: #a207ea;
 }
-@media only screen and (max-width:  1200px)
+#login footer, #registration footer
+{
+	position: fixed;
+}
+@media only screen and (max-width: 1200px)
 {
 	.t_rec
 	{
@@ -469,6 +529,25 @@ footer
 }
 @media only screen and (max-width: 991px)
 {
+	nav.navbar-light button.navbar-toggler
+	{
+		border-color: #a207ea;
+	}
+	button.navbar-toggler:focus
+	{
+		background-color: #a207ea;
+		box-shadow: none;
+	}
+	li.nav-item a.nav-link.j-btn
+	{
+		padding-right: 10px;
+		text-align: right;
+		border: 1px solid transparent;
+	}
+	li.nav-item:nth-of-type(4) a.nav-link.j-btn:hover
+	{
+		border: 1px solid #a207ea;
+	}
 	#hero img
 	{
 		width: auto;
@@ -490,5 +569,9 @@ footer
 	.row > * .mood
 	{
 		width: auto;
+	}
+	input[type="email"], input[type="password"]
+	{
+		width: 100%;
 	}
 }
