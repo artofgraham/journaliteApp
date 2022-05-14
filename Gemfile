@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 
 #Use sqlite3 as the database for Active Record
-# gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
 
 #Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -82,9 +82,10 @@ group :test do
   gem "webdrivers"
 end
 
-# group :development, :test do
-#   gem "rspec-rails"
-# end
+group :development, :test do
+  gem "byebug"
+  gem "rspec-rails"
+end
 
 #Heroku
 group :production do

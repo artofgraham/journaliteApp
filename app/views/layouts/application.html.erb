@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "styles", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= javascript_include_tag "journal", "data-turbo-track": "reload" , defer: true %>
+    <%= javascript_include_tag "journal", "data-turbo-track": "reload", "data-turbo-cache": "false" , defer: true %>
     <%= favicon_link_tag asset_path("journalite-logo.svg") %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
