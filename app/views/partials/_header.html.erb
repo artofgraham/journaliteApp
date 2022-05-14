@@ -1,36 +1,36 @@
 <header class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <div class="container">
+    <div class="container-lg">
       <a class="navbar-brand" href="/" tabindex="1"><%= image_tag "journalite-logo.svg", width: "50", title: "journalite" %></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <%= link_to "Journal", journal_path, { class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "2" } %>
+            <%= link_to "Journal", journal_path, { class: "nav-link dropdown-toggle btn j-btn invert", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "2" } %>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><%= link_to "Your journal", journal_path, class: "dropdown-item", tabindex: "3" %></li>
               <li><%= link_to "New entry", new_entry_path, class: "dropdown-item", tabindex: "4" %></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <%= link_to "Thoughts", thoughts_path, { class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "5" } %>
+            <%= link_to "Thoughts", thoughts_path, { class: "nav-link dropdown-toggle btn j-btn invert", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", tabindex: "5" } %>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><%= link_to "Your thought records", thoughts_path, class: "dropdown-item", tabindex: "6" %></li>
               <li><%= link_to "New record", new_record_path, class: "dropdown-item", tabindex: "7" %></li>
             </ul>
           </li>
-          <li class="nav-item"><%= link_to "FAQs", faqs_path, class: "nav-link", tabindex: "8" %></li>
+          <li class="nav-item"><%= link_to "FAQs", faqs_path, class: "nav-link btn j-btn invert", tabindex: "8" %></li>
+          <% if user_signed_in? %>
+          <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, :method => :get, class: "btn j-btn" %></li>
+          <span>Hello, <%= current_user.email %>!</span>
+          <% else %>
+          <li class="nav-item"><%= link_to "Register", new_user_registration_path, class: "nav-link btn j-btn" %></li>
+          <li class="nav-item"><%= link_to "Log in", new_user_session_path, class: "nav-link btn j-btn invert" %></li>
+          <% end %>
         </ul>
       </div>
-      <span class="notice"><%= notice %></span>
-      <span class="alert"><%= alert %></span>
-      <% if user_signed_in? %>
-        <span><%= link_to "Log out", destroy_user_session_path, :method => :get, class: "btn j-btn" %><br>Welcome, <%= current_user.email %>!
-        </span>
-      <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "btn j-btn" %> or
-        <%= link_to "Log in", new_user_session_path, class: "btn j-btn" %>
-      <% end %>
     </div>
   </nav>
+  <span class="notice"><%= notice %></span>
+  <span class="alert"><%= alert %></span>
 </header>
