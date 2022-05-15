@@ -17,7 +17,7 @@ a, button
 	color: #a207ea;
 	font-family: "Arial", sans-serif;
 }
-a:hover
+p a:hover
 {
 	color: #fff;
 	text-decoration: none;
@@ -46,11 +46,19 @@ p
 	margin: 30px 0;
 	color: #000;
 }
+abbr[title]
+{
+	text-decoration-color: #a207ea;
+}
 header
 {
 	position: relative;
-	z-index: 99;
+	z-index: 100;
 	background-color: #fff;
+}
+div.navbar-collapse
+{
+	flex-grow: 0;
 }
 nav ul li a, button
 {
@@ -80,6 +88,7 @@ section
 }
 .user
 {
+	position: relative;
 	border: 1px solid #a207ea;
 	border-radius: 3px;
 	padding: 10px 20px 20px;
@@ -92,8 +101,13 @@ form section
 }
 #hero
 {
+	padding-bottom: 0;
 	position: relative;
 	background: linear-gradient(to bottom, #fffa68, #fff 85%);
+}
+#hero .col-lg-8
+{
+	z-index: 100;
 }
 #journal #hero
 {
@@ -355,8 +369,19 @@ input[type="checkbox"]
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	z-index: 99;
+	z-index: 100;
 	cursor: pointer;
+}
+#login input[type="checkbox"]
+{
+	position: relative;
+	top: 3px;
+	left: 0;
+	opacity: 1.0;
+}
+#login input[type="checkbox"]:checked
+{
+	background-color: #a207ea;
 }
 .tick
 {
@@ -428,7 +453,7 @@ input[type="radio"]:checked ~ .circle, .circle:checked
 }
 input[type="email"], input[type="password"]
 {
-	width: 50%;
+	width: 66.67%;
 	padding: 4px;
 	border-color: #a207ea;
 	border-radius: 4px;
@@ -500,6 +525,7 @@ tr:nth-of-type(2n)
 }
 .pagination
 {
+	padding: 10px 0;
 	background-color: #fff;
 	border: 1px solid #a207ea;
 	border-radius: 3px;
@@ -508,13 +534,27 @@ tr:nth-of-type(2n)
 {
 	font-size: 16px;
 	color: #a207ea;
-	padding: 5px;
+	padding: 15px 10px;
 	text-decoration: none;
 }
 .paginator ul li.active a
 {
 	color: #fff;
 	background-color: #a207ea;
+}
+.paginator ul li a:hover
+{
+	color: #fff;
+	background-color: #a207ea;
+}
+.paginator ul li.active a:hover
+{
+	background-color: #7e05b7;
+}
+.paginator a:not([href]):not([class]), .paginator a:not([href]):not([class]):hover
+{
+	color: #fff;
+	cursor: pointer;
 }
 address
 {
@@ -531,7 +571,7 @@ footer
 	bottom: 0;
 	background-color: #a207ea;
 }
-#login footer, #registration footer
+#login footer
 {
 	position: fixed;
 }
@@ -540,6 +580,10 @@ footer
 	.t_rec
 	{
 		font-size: 13px;
+	}
+	input[type="email"], input[type="password"]
+	{
+		width: 100%;
 	}
 }
 @media only screen and (max-width: 991px)
@@ -584,9 +628,5 @@ footer
 	.row > * .mood
 	{
 		width: auto;
-	}
-	input[type="email"], input[type="password"]
-	{
-		width: 100%;
 	}
 }

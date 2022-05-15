@@ -1,18 +1,18 @@
 <%= content_for :body_id, "thoughts" %>
 <section id="hero" class="container-fluid">
-	<section class="container-lg">
+	<div class="container-lg">
 		<div class="row">
 			<div class="col-lg-8">
 				<h1>Record your thoughts</h1>
 				<h2>Remember to question negative thinking</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="col-lg-8">Our thoughts govern how we feel and act. They can impact our lives in powerful ways and we tend to act on those impulses when emotions and tensions are high. Challenge your thinking; question the reasons why you feel a certain way at a certain moment. Start a thought record after you've experienced an unhelpful or unpleassant event or behaviour.</p>
 				<%= button_to "Create a throught record", new_record_path, method: :get, class: "btn j-btn" %>
 			</div>
 			<div class="col-lg-4 icon">
 				<%= image_tag "gratitude-hero.png", width: "auto", height: "auto", class: "d-block" %>
 			</div>
 		</div>
-	</section>
+	</div>
 </section>
 <section id="t_records" class="container-fluid">
 	<section class="container-lg">
