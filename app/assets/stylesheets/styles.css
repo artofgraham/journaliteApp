@@ -328,6 +328,7 @@ li.nav-item a.nav-link.j-btn:hover
 .shorten
 {
 	height: 100px;
+	min-height: 200px;
 }
 .page:focus, input:focus
 {
