@@ -8,7 +8,7 @@ body
 {
 	position: relative;
 }
-h1, h2, h3, h4, h5, h6, p, li, td
+h1, h2, h3, h4, h5, h6, p, li, td, .trix-content
 {
 	font-family: "Libre Baskerville", serif;
 }
@@ -256,7 +256,7 @@ li.nav-item a.nav-link.j-btn:hover
 }
 .log
 {
-	height: 520px;
+	height: 545px;
 	margin: 0 10px 10px 0;
 	padding: 10px 20px;
 	background: linear-gradient(to bottom, #fff 98%, #eee 1px);
@@ -287,20 +287,24 @@ li.nav-item a.nav-link.j-btn:hover
 	word-break: break-all;
 	hyphens: auto;
 }
-#view .log p:nth-of-type(3), #view .rec p
+#view .log p:nth-of-type(3), #view .rec p, #view .trix-content
 {
 	overflow: visible;
 	-webkit-line-clamp: unset;
 	text-overflow: unset;
 	line-height: 1.8;
 }
-.log p:nth-of-type(3), .rec p
+.log p:nth-of-type(3), .rec p, .trix-content
 {
 	overflow: hidden;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
 	text-overflow: ellipsis;
+}
+.log p:nth-of-type(3)
+{
+	margin-bottom: 0;
 }
 .t_rec
 {
@@ -315,7 +319,8 @@ li.nav-item a.nav-link.j-btn:hover
 .page
 {
 	width: 100%;
-	height: 300px;
+	height: auto;
+	min-height: 350px;
 	padding: 4px 8px;
 	border: 1px solid #d8d8d8;
 	border-radius: 3px;
