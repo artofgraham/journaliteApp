@@ -1,14 +1,14 @@
 <%= form_with(model: entry) do |form| %>
   <% if entry.errors.any? %>
-    <div class="delete">
+    <section class="error">
       <h2>Uh oh!</h2>
-      <p><%= pluralize(entry.errors.count, "error") %> prohibited your journal entry from being created.</p>
+      <p><%= pluralize(entry.errors.count, "error") %> prevented your journal entry from being created.</p>
       <ul>
         <% entry.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
-    </div>
+    </section>
   <% end %>
   <section>
     <%= form.label :jentrylog, "Date and time", style: "display: block" %>

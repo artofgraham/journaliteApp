@@ -19,8 +19,13 @@ a, button
 }
 a:hover
 {
-	color: ;
+	color: #fff;
 	text-decoration: none;
+	background-color: #a207ea;
+}
+a:hover img
+{
+	background-color: #fff;
 }
 h1
 {
@@ -32,9 +37,14 @@ h2
 	font-size: 38px;
 	margin: 25px 0;
 }
+.box h2
+{
+	font-size: 24px;
+}
 p
 {
 	margin: 30px 0;
+	color: #000;
 }
 header
 {
@@ -45,6 +55,15 @@ header
 nav ul li a, button
 {
 	font-family: "Arial", sans-serif;
+}
+nav ul ul
+{
+	list-style-type: none;
+}
+ul.dropdown-menu[data-bs-popper]
+{
+	top: 80%;
+	left: 5px;
 }
 section
 {
@@ -455,10 +474,6 @@ input[type="email"], input[type="password"]
 .sticky
 {
 	position: fixed;
-}
-.col-lg-4 .sticky
-{
-	padding-right: 44px;
 }
 table
 {

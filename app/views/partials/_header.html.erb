@@ -1,7 +1,7 @@
 <header class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
     <div class="container-lg">
-      <a class="navbar-brand" href="/" tabindex="1"><%= image_tag "journalite-logo.svg", width: "50", title: "journalite" %></a>
+      <a class="navbar-brand" href="/" tabindex="1"><%= image_tag "journalite-logo.svg", width: "60", title: "journalite" %></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -21,8 +21,8 @@
           </li>
           <li class="nav-item"><%= link_to "FAQs", faqs_path, class: "nav-link btn j-btn invert", tabindex: "8" %></li>
           <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, :method => :get, class: "btn j-btn" %></li>
-          <span>Hello, <%= current_user.email %>!</span>
+          <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, :method => :get, class: "nav-link btn j-btn" %></li>
+          <li><span class="nav-link btn">Hello, <%= current_user.email %>!</span><span class="notice"><%= notice %></span><span class="alert"><%= alert %></span></li>
           <% else %>
           <li class="nav-item"><%= link_to "Register", new_user_registration_path, class: "nav-link btn j-btn" %></li>
           <li class="nav-item"><%= link_to "Log in", new_user_session_path, class: "nav-link btn j-btn invert" %></li>
@@ -31,6 +31,4 @@
       </div>
     </div>
   </nav>
-  <span class="notice"><%= notice %></span>
-  <span class="alert"><%= alert %></span>
 </header>
