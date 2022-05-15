@@ -7,6 +7,7 @@
           <p><%= notice %></p>
         </div>
         <h1 class="heading">Journal entries</h1>
+        <p>All your entries display here and are sorted by most recent first.</p>
         <%= link_to "New entry", new_entry_path, class: "btn j-btn new" %>
         <div id="entries">
           <% @entries.each do |entry| %>
