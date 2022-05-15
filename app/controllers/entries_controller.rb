@@ -7,6 +7,7 @@ class EntriesController < ApplicationController
     #@entries = Entry.all
     @title = "All your journal entries | journalite"
     @entries = Entry.where user_id: current_user.id
+    # @entries = Entry.all.with_rich_text_content
     @entries = Entry.order("created_at DESC").page(params[:page]).per(6)
   end
 
