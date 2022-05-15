@@ -2,7 +2,7 @@
   <% if record.errors.any? %>
     <section class="error">
       <h2>Uh oh!</h2>
-      <p><%= pluralize(record.errors.count, "error") %> prohibited your thought record from being created.</p>
+      <p><%= pluralize(record.errors.count, "error") %> prevented your thought record from being created.</p>
       <ul>
         <% record.errors.each do |error| %>
           <li><%= error.full_message %></li>

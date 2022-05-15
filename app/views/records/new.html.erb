@@ -4,6 +4,7 @@
     <div class="row">
       <div class="col-lg-8">
         <h1>New thought record</h1>
+        <p>Starting a new thought record can be intimidating. Take your time, and ensure you're alone and won't be disturbed while you're completing it. All eight sections are required. If you feel that there is nothing to add to a section then enter "none".</p>
         <%= render "form", record: @record %>
         <section>
           <%= link_to "All records", records_path, class: "btn j-btn d-inline-block" %>
@@ -11,17 +12,23 @@
       </div>
       <div class="col-lg-4">
         <div class="sticky">
-          <h2>Sample questions for adaptive responses</h2>
-          <p>Questions to help you compose alternative responses.</p>
-          <ol>
-            <li>What is the evidence that the automatic thought is true? Untrue?</li>
-            <li>Is there an alternative explanation?</li>
-            <li>If the worst happened, how could I cope? What's the best that could happen? What's the most realistic outcome?</li>
-            <li>What's the effect of my believing the automatic thought? What could be the effect of my changing my thinking?</li>
-            <li>If [person's name] was in this situation and had this thought, what would I tell them?</li>
-            <li>What would be good to do?</li>
-          </ol>
-          <p>You can view the <%= link_to "12 types of cognitive distortions", faqs_path(anchor: "cognitive-distortions"), target: :_blank %> with examples on the 'FAQs' page.</p>
+<div class="container">
+    <div class="row">
+          <div class="col-lg-10 box">
+            <h2>Sample questions for adaptive responses</h2>
+            <p>Questions to help you compose alternative responses.</p>
+            <ol>
+              <li>What is the evidence that the automatic thought is true? Untrue?</li>
+              <li>Is there an alternative explanation?</li>
+              <li>If the worst happened, how could I cope? What's the best that could happen? What's the most realistic outcome?</li>
+              <li>What's the effect of my believing the automatic thought? What could be the effect of my changing my thinking?</li>
+              <li>If [person's name] was in this situation and had this thought, what would I tell them?</li>
+              <li>What would be good to do?</li>
+            </ol>
+            <p>You can view the <%= link_to "12 types of cognitive distortions", faqs_path(anchor: "cognitive-distortions"), target: :_blank %> with examples on the 'FAQs' page.</p>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
